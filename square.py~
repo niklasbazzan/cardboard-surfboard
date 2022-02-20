@@ -91,7 +91,7 @@ s = (swp - rp) + ((swp & rp)- cs)
 #     show_object(s.section(i))
 
 ###CROSSES
-# cwp = cq.Workplane("YZ").add(sb)
+# cwp = cq.Workplane("YZ").add(sb) #try ZY?
 # c = (cwp - rp - cc) + ((cwp & rp))
 
 # for i in range(U, bl, q):
@@ -105,7 +105,7 @@ ls = list(range(0, math.ceil(bw/2), q))
 from path import Path
 from cadquery import exporters as exp
 
-with Path('six-eight-funboard').mkdir_p():
+with Path('dxfs').mkdir_p():
     exp.export(s.section(ls[0]),'s0.dxf')
     exp.export(s.section(ls[1]),'s1.dxf')
     exp.export(s.section(ls[2]),'s2.dxf')
